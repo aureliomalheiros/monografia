@@ -58,7 +58,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>{#SERVICO} service is running</name>
+							<name>{#SERVICO} Seguro</name>
                             <type>3</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -105,11 +105,11 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{TCP port scan LLD:net.tcp.service[tcp,,{#PORTA}].last(0)}=0</expression>
-                            <name>{#SERVICO} service is down</name>
+                            <expression>{TCP port scan LLD:net.tcp.service[tcp,,{#PORTA}].last(1)}=1</expression>
+                            <name>{#SERVICO} Porta ativada</name>
                             <url/>
                             <status>0</status>
-                            <priority>3</priority>
+                            <priority>4</priority>
                             <description/>
                             <type>0</type>
                         </trigger_prototype>
