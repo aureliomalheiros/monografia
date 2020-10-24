@@ -36,7 +36,7 @@ host@host:~$ sudo ./tcp-port-scan-lld.sh IP-HOST
 
 #### 4. É necessário validar o Zabbix está com  permissões para executar scripts externos
 
-	Abra o arquivo **zabbix_server.conf**
+	Abra o arquivo zabbix_server.conf
 		
 ```console
 host@host:~$ sudo vim /etc/zabbix/zabbix_server.conf
