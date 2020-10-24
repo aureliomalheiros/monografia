@@ -56,4 +56,4 @@ host@host:~$ sudo systemctl restart zabbix-serve
 		
 		O arquivo template_tcp_port_scan_lld.xml deve ser importado para o Zabbix.
 		Após isso adicione no host a ser monitorado.
-![Exemplo de importação](monografia-exemplo.png)
+![monogafia-exemplo](https://user-images.githubusercontent.com/12739791/97092364-e19ba700-1619-11eb-97ab-712ec0fb7bb2.png)
