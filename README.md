@@ -24,23 +24,23 @@
 
 		Depois de adicionar o arquivo no diretório dê permissões de execução:
 		
-		```console
-		host@host$sudo chmod +x tcp-port-scan-lld.sh
-		```
+```console
+host@host$sudo chmod +x tcp-port-scan-lld.sh
+```
 		
 		**Para fazer um teste digite o seguinte comando:**
 			
-		```console
-		host@host$sudo ./tcp-port-scan-lld.sh IP-HOST
-		```
+```console
+host@host$sudo ./tcp-port-scan-lld.sh IP-HOST
+```
 
 #### 4. É necessário validar o Zabbix está com  permissões para executar scripts externos
 
 	Abra o arquivo **zabbix_server.conf**
 		
-		```console
-		sudo vim /etc/zabbix/zabbix_server.conf
-		```
+```console
+sudo vim /etc/zabbix/zabbix_server.conf
+```
 		Procure por ExternalScripts no arquivo
 		É necessário adicionar a linha que está abaixo caso não exista no arquivo 
 			
@@ -48,10 +48,12 @@
 
 		Se não existir, adicione e salve o arquivo
 		
-		```console
-		$sudo systemctl restart zabbix-server
-		```
+```console
+$sudo systemctl restart zabbix-serve
+```
+
 #### 5. Importe o template para o zabbix
 		
-		O arquivo template_tcp_port_scan_lld.xml deve ser importado para o Zabbix
+		O arquivo template_tcp_port_scan_lld.xml deve ser importado para o Zabbix.
+		Após isso adicione no host a ser monitorado.
 
