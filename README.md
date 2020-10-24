@@ -6,14 +6,14 @@
 	Para sistemas operacionais DEB
 		
 ```console
-host@host:~$sudo apt-get update
-host@host:~$sudo apt-get install nmap -y
+host@host:~$ sudo apt-get update
+host@host:~$ sudo apt-get install nmap -y
 ```
 	Para sistemas operacionais RPM
 		
 ```console
-host@host:~$sudo yum update
-host@host:~$sudo yum install nmap -y
+host@host:~$ sudo yum update
+host@host:~$ sudo yum install nmap -y
 ```
 
 #### 3. O arquivo tcp-port-scan-lld.sh deve ser enviado para o servidor Zabbix
@@ -25,13 +25,13 @@ host@host:~$sudo yum install nmap -y
 		Depois de adicionar o arquivo no diretório dê permissões de execução:
 		
 ```console
-host@host:~$sudo chmod +x tcp-port-scan-lld.sh
+host@host:~$ sudo chmod +x tcp-port-scan-lld.sh
 ```
 		
 		**Para fazer um teste digite o seguinte comando:**
 			
 ```console
-host@host:~$sudo ./tcp-port-scan-lld.sh IP-HOST
+host@host:~$ sudo ./tcp-port-scan-lld.sh IP-HOST
 ```
 
 #### 4. É necessário validar o Zabbix está com  permissões para executar scripts externos
@@ -39,7 +39,7 @@ host@host:~$sudo ./tcp-port-scan-lld.sh IP-HOST
 	Abra o arquivo **zabbix_server.conf**
 		
 ```console
-host@host:~$sudo vim /etc/zabbix/zabbix_server.conf
+host@host:~$ sudo vim /etc/zabbix/zabbix_server.conf
 ```
 		Procure por ExternalScripts no arquivo
 		É necessário adicionar a linha que está abaixo caso não exista no arquivo 
@@ -49,7 +49,7 @@ host@host:~$sudo vim /etc/zabbix/zabbix_server.conf
 		Se não existir, adicione e salve o arquivo
 		
 ```console
-host@host:~$sudo systemctl restart zabbix-serve
+host@host:~$ sudo systemctl restart zabbix-serve
 ```
 
 #### 5. Importe o template para o zabbix
